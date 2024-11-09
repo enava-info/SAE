@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   
+    <title>Cargar Actividad Extracurricular</title>
+
+
+</head>
+<body>
+    <!-- Este es el encabezado principal de la página con Logo y Buscador -->
+    <div>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+        <img src="./img/logoexactas.png" alt="">
+    </a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Buscar en la FCEyN..." aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Buscar</button>
+    </form>
+  </div>
+  </div>
+
+  <!-- Esta es la Barra de Navegacion fija -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid border">
+    <a class="navbar-brand" href="#">Inicio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Institucional</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Departamentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Carreras</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">Estudiantes</a>
+        </li>
+         <!-- Dropdown Docente -->
+         <li class="nav-item dropdown">
+          <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Docente</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="MisAE.html">Mis AE</a></li>
+            <li><a class="dropdown-item" href="NuevaAE.html">Nueva AE</a></li>
+          </ul>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">Académica</a>
+        </li>
+          </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">Invest. Postgrado y Extensión</a>
+        </li>
+          </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">Administración</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+
+<!-- Esto es el titulo de donde está actualmente -->
+<h2>Modulo: SAE <span class="badge text-bg-secondary flex-wrap"></span></h2>
+
+<!-- Esto es el sub-titulo de donde está actualmente -->
+<h4>Presentar una nueva Actvidad <span class="badge text-bg-secondary flex-wrap"></span></h4>
+
+
+
+
+<!-- Esto es el Ingreso de Formulario -->
+
+
+<!-- Usuario logueado en el sistema -->
+<!-- No lo puede cambiar y es visible -->
+<form action="/guardarRegistro.php" method="post" enctype="multipart/form-data">
+<div class="input-group mb-3 flex-wrap">
+  <span class="input-group-text" id="basic-addon1 addon-wrapping">Hola:</span>
+  <input disabled required type="text" class="form-control" placeholder="Username" name="Username" aria-describedby="basic-addon1">
+</div>
+
+
+
+<!-- Nombre corto de la Actividad a Presentar -->
+
+<div class="input-group mb-3 flex-wrap">
+  <span class="input-group-text" id="basic-addon1 addon-wrapping">Nombre de la Actividad:</span>
+  <input type="text" class="form-control" placeholder="Escriba aquí un nombre corto a modo de título" name="NombreActividad" aria-label="Titulo Actividad" aria-describedby="basic-addon1" nameActivity="nombre" required>
+</div>
+
+<!-- Descripción de la Actividad a Presentar -->
+<div class="input-group mb-3 flex-wrap">
+  <span class="input-group-text" id="basic-addon1 addon-wrapping">Breve descripción de la Actividad</span>
+  <textarea class="form-control" aria-label="With textarea" DetailActivity="DetalleActividad" name="DetalleActividad" required></textarea>
+</div>
+
+<!-- Fecha de la Actividad a Presentar -->
+<div class="input-group mb-3 flex-wrap">
+  <span class="input-group-text" id="basic-addon1 addon-wrapping">Fecha de la Actividad:</span>
+  <input type="date" class="form-control" dateActivity="FechaActividad" name="FechaActividad" required>
+</div>
+
+<!-- Campo de hora de inicio -->
+
+<div class="input-group mb-3 flex-wrap">
+  <span class="input-group-text" id="basic-addon1 addon-wrapping">Hora de Inicio:</span>
+  <input type="time" class="form-control" dateActivity="HoraIniActividad" name="HoraInicio" required>
+</div>
+
+<!-- Campo de hora de fin -->
+<div class="input-group mb-3 flex-wrap">
+  <span class="input-group-text" id="basic-addon1 addon-wrapping">Hora de Fin:</span>
+  <input type="time" class="form-control" dateActivity="HoraFinActividad" name="HoraFin" required>
+</div>
+
+<!-- Insertar Adjunto de la Actividad a Presentar -->
+<h5>Insertar Documentación de la Actividad <span class="badge text-bg-secondary flex-wrap"></span></h5>
+
+<div class="input-group mb-3 flex-wrap">
+  <input type="file" class="form-control" id="inputGroupFile01">
+  <label class="input-group-text" for="inputGroupFile01" FileActivity="ArchivoActividad" required>Insertar</label>
+</div>
+
+<!-- Botón para enviar toda la Actividad a Presentar -->
+
+<button type="submit" class="btn btn-success mb-3 flex-wrap">Cargar Actividad</button>
+</form>
+
+
+<!-- Esto es el Fin del Ingreso de Formulario -->
+
+</body>
+
+
+<footer class="bg-primary text-black text-center py-1">
+    <p>&copy; 2024 Facultad de Ciencias Exactas. Todos los derechos reservados.</p>
+    
+</footer>
+
+</html>
